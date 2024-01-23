@@ -1,0 +1,283 @@
+Coin 1 :
+	Case dans l'angle en haut à gauche :
+		poserTwist(alJoueurs.get(0), 1, 'A', 1);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[0][0]);
+		System.out.println("val plateau[0][0] (c1) : " + plateau[0][0].getValCoin(0));
+
+		Résultat : 
+			46
+			val plateau[0][0] (c1) : R
+
+
+
+	if n°1 ligne 0 et colonne autre que 0 :
+		poserTwist(alJoueurs.get(0), 1, 'B', 1);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[0][1]);
+		System.out.println("val plateau[0][1] (c1) : " + plateau[0][1].getValCoin(0));
+		System.out.println("val plateau[0][0] (c2) : " + plateau[0][0].getValCoin(1));
+		
+		Résultat :
+			52
+			val plateau[0][1] (c1) : R
+			val plateau[0][0] (c2) : R
+
+
+	if n°2 ligne et colonne != 0 :
+		poserTwist(alJoueurs.get(0), 5, 'D', 1);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[4][3]);
+		System.out.println("val plateau[4][3] (c1) : " + plateau[4][3].getValCoin(0));
+		System.out.println("val plateau[4][2] (c2) : " + plateau[4][2].getValCoin(1));
+		System.out.println("val plateau[3][2] (c3) : " + plateau[3][2].getValCoin(2));
+		System.out.println("val plateau[3][3] (c4) : " + plateau[3][3].getValCoin(3));
+
+		Résultat :
+			45
+			val plateau[4][3] (c1) : R
+			val plateau[4][2] (c2) : R
+			val plateau[3][2] (c3) : R
+			val plateau[3][3] (c4) : R
+
+
+	if n°3 pas la première ligne mais sur la première colonne :
+		poserTwist(alJoueurs.get(0), 5, 'A', 1);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[4][0]);
+		System.out.println("val plateau[4][0] (c1) : " + plateau[4][0].getValCoin(0));
+		System.out.println("val plateau[3][0] (c4) : " + plateau[3][0].getValCoin(3));
+
+		Résultat :
+			11
+			val plateau[4][0] (c1) : R
+			val plateau[3][0] (c4) : R
+
+
+
+Coin 2 :
+	Coin en haut à droite :
+		poserTwist(alJoueurs.get(0), 1, 'G', 2);
+
+		System.out.println(afficherPlateau());
+		System.out.println(plateau[0][6]);
+		System.out.println("val plateau[0][6] (c2) : " + plateau[0][6].getValCoin(1));
+
+		Résultat :
+			21
+			val plateau[0][6] (c2) : R
+
+
+
+	if n°1 première ligne mais pas dernière colonne :
+		poserTwist(alJoueurs.get(0), 1, 'C', 2);
+	
+		System.out.println(afficherPlateau());
+		System.out.println(plateau[0][2]);
+		System.out.println("val plateau[0][2] (c2) : " + plateau[0][2].getValCoin(1));
+		System.out.println("val plateau[0][3] (c1) : " + plateau[0][3].getValCoin(0));
+
+		Résultat :
+			13
+			val plateau[0][2] (c2) : R
+			val plateau[0][3] (c1) : R
+
+
+	if n°2 pas la première ligne et pas la dernière colonne :
+		poserTwist(alJoueurs.get(0), 5, 'D', 2);
+
+		System.out.println(afficherPlateau());
+		System.out.println(plateau[4][3]);
+		System.out.println("val plateau[4][3] (c2) : " + plateau[4][3].getValCoin(1));
+		System.out.println("val plateau[3][3] (c3) : " + plateau[3][3].getValCoin(2));
+		System.out.println("val plateau[3][4] (c4) : " + plateau[3][4].getValCoin(3));
+		System.out.println("val plateau[4][4] (c1) : " + plateau[4][4].getValCoin(0));
+
+		Résultat :
+			46
+			val plateau[4][3] (c2) : R
+			val plateau[3][3] (c3) : R
+			val plateau[3][4] (c4) : R
+			val plateau[4][4] (c1) : R
+
+
+	if n°3 pas la première ligne mais sur la dernière colonne
+		poserTwist(alJoueurs.get(0), 6, 'G', 2);
+
+		System.out.println(afficherPlateau());
+		System.out.println(plateau[5][6]);
+		System.out.println("val plateau[5][6] (c2) : " + plateau[5][6].getValCoin(1));
+		System.out.println("val plateau[4][6] (c3) : " + plateau[4][6].getValCoin(2));
+
+		Résultat :
+			31
+			val plateau[5][6] (c2) : R
+			val plateau[4][6] (c3) : R
+
+
+Coin 3 :
+	coin en bas a droite : 
+
+		System.out.println(afficherPlateau());
+ 	        System.out.println(alJoueurs.get(0));
+		poserTwist(alJoueurs.get(0), 10, 'G', 3);
+
+        	System.out.println(afficherPlateau());
+
+        	System.out.println(plateau[9][6]);
+        	System.out.println("val plateau[9][6] : " + plateau[9][6].getValCoin(2));
+
+		Resultat : 
+
+			12
+			val plateau[9][6] : R
+
+
+	if n°1 si ligne est egal a la derniere ligne et colonne differend de la derniere colonne : 
+
+		System.out.println(afficherPlateau());
+       	 	System.out.println(alJoueurs.get(0));
+        	poserTwist(alJoueurs.get(0), 10, 'C', 3);
+
+        	System.out.println(afficherPlateau());
+
+        	System.out.println(plateau[9][2]);
+        	System.out.println("val plateau[9][2] : " + plateau[9][2].getValCoin(2));
+        	System.out.println("val plateau[9][3] : " + plateau[9][3].getValCoin(3));
+
+		Resultat:
+
+ 			8
+			val plateau[9][2] : R
+			val plateau[9][3] : R
+
+
+
+	if n°2 pas la dernière ligne et pas la dernière colonne
+		poserTwist(alJoueurs.get(0), 5, 'D', 3);
+
+		System.out.println(afficherPlateau());
+		System.out.println(plateau[4][3]);
+		System.out.println("val plateau[4][3] (c3) : " + plateau[4][3].getValCoin(2));
+		System.out.println("val plateau[4][4] (c4) : " + plateau[4][4].getValCoin(3));
+		System.out.println("val plateau[5][3] (c2) : " + plateau[5][3].getValCoin(1));
+		System.out.println("val plateau[5][4] (c1) : " + plateau[5][4].getValCoin(0));
+
+		Résultat :
+			15
+			val plateau[4][3] (c3) : R
+			val plateau[4][4] (c4) : R	
+			val plateau[5][3] (c2) : R
+			val plateau[5][4] (c1) : R
+
+
+	if n°3 pas la dernière ligne mais sur la dernière colonne
+		poserTwist(alJoueurs.get(0), 8, 'G', 3);
+
+		System.out.println(afficherPlateau());
+		System.out.println(plateau[7][6]);
+		System.out.println("val plateau[7][6] (c3) : " + plateau[7][6].getValCoin(2));
+		System.out.println("val plateau[8][6] (c2) : " + plateau[8][6].getValCoin(1));
+
+		Résultat :
+			8
+			val plateau[7][6] (c3) : R
+			val plateau[8][6] (c2) : R
+
+
+
+
+coin 4 :
+
+	test coin en basà gaucche
+		System.out.println(afficherPlateau());
+		System.out.println(alJoueurs.get(0));
+		poserTwist(alJoueurs.get(0), 10, 'A', 4);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[9][0]);
+		System.out.println("val plateau[9][0] : " + plateau[9][0].getValCoin(3));
+
+		Résultat : 
+
+		19
+		val plateau[9][0] : R
+
+
+	if n°1 si la ligne est egale a la derniere ligne et que la colonne est differend de 0:
+		System.out.println(afficherPlateau());
+		System.out.println(alJoueurs.get(0));
+		poserTwist(alJoueurs.get(0), 10, 'D', 4);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[9][3]);
+		System.out.println("val plateau[9][3] : " + plateau[9][3].getValCoin(3));
+		System.out.println("val plateau[9][2] : " + plateau[9][2].getValCoin(2));
+
+		Résultat : 
+
+		38
+		val plateau[9][3] : R
+		val plateau[9][2] : R
+
+
+	if n°2 Si la ligne est différend de la derniere ligne et que la colone est differend de 0
+
+		System.out.println(afficherPlateau());
+		System.out.println(alJoueurs.get(0));
+		poserTwist(alJoueurs.get(0), 5, 'D', 4);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[4][3]);
+		System.out.println("val plateau[4][3] : " + plateau[4][3].getValCoin(3));
+		System.out.println("val plateau[4][2] : " + plateau[4][2].getValCoin(2));
+		System.out.println("val plateau[5][2] : " + plateau[5][2].getValCoin(1));
+		System.out.println("val plateau[5][3] : " + plateau[5][3].getValCoin(0));
+
+		Résultat: 
+
+			24
+			val plateau[4][3] : R
+			val plateau[4][2] : R
+			val plateau[5][2] : R
+			val plateau[5][3] : R
+
+	if n°3 si la ligne est differente de la derniere ligne et est egal à la colonne 0 	
+		System.out.println(afficherPlateau());
+		System.out.println(alJoueurs.get(0));
+		poserTwist(alJoueurs.get(0), 5, 'A', 4);
+
+		System.out.println(afficherPlateau());
+
+		System.out.println(plateau[4][0]);
+		System.out.println("val plateau[4][0] : " + plateau[4][0].getValCoin(3));
+		System.out.println("val plateau[5][0] : " + plateau[5][0].getValCoin(0));
+
+		Résultat:
+
+			24
+			val plateau[4][0] : R
+			val plateau[5][0] : R
+
+
+
+
+
+
+
+
+
+
+
+

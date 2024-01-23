@@ -1,0 +1,44 @@
+	public static void main(String[] args) {
+		Jeu j = new Jeu(2);
+
+		System.out.println(afficherPlateau());
+		System.out.println(alJoueurs.get(0));
+
+		System.out.println("\n\n---------- TESTS getPossesseur() ----------");
+
+		System.out.println("poserTwist(alJoueurs.get(0), 5, 'D', 1);");
+		poserTwist(alJoueurs.get(0), 5, 'D', 1);
+
+		System.out.println("Valeur du conteneur : "    + plateau[4][3]);
+
+		System.out.println("val plateau[4][3] (c1) : " + plateau[4][3].getValCoin(0));
+
+		System.out.println("Possesseur prevu 'R' : " + plateau[4][3].getPossesseur());
+
+
+		System.out.println("\nposerTwist(alJoueurs.get(1), 5, 'D', 2);");
+		poserTwist(alJoueurs.get(1), 5, 'D', 2);
+
+		System.out.println("val plateau[4][3] (c2) : " + plateau[4][3].getValCoin(1));
+
+		System.out.println("Possesseur prevu 'N' : " + plateau[4][3].getPossesseur());
+
+
+		System.out.println("\nposerTwist(alJoueurs.get(1), 5, 'D', 3);");
+		poserTwist(alJoueurs.get(0), 5, 'D', 3);
+
+		System.out.println("val plateau[4][3] (c3) : " + plateau[4][3].getValCoin(2));
+
+		System.out.println("Possesseur prevu 'R' : " + plateau[4][3].getPossesseur());
+
+
+		System.out.println("\nposerTwist(alJoueurs.get(1), 5, 'D', 4);");
+		poserTwist(alJoueurs.get(1), 5, 'D', 4);
+
+		System.out.println("val plateau[4][3] (c4) : " + plateau[4][3].getValCoin(3));
+
+		System.out.println("Possesseur prevu 'N' : " + plateau[4][3].getPossesseur());
+
+
+
+	}
